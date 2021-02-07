@@ -42,13 +42,14 @@ let showResult = mealId => {
             <h2>${ data.meals[0].strArea }</h2>
             <br>
 
-            <h3>${ data.meals[0].strMeasure1 }</h3>
-            <h3>${ data.meals[0].strMeasure2 }</h3>
-            <h3>${ data.meals[0].strMeasure3 }</h3>
-            <h3>${ data.meals[0].strMeasure4 }</h3>
-            <h3>${ data.meals[0].strMeasure5 }</h3>
-            <h3>${ data.meals[0].strMeasure6 }</h3>
-            <h3>${ data.meals[0].strMeasure7 }</h3>     
+            <h3>${ data.meals[0].strIngredient1 }</h3>
+            <h3>${ data.meals[0].strIngredient2 }</h3>
+            <h3>${ data.meals[0].strIngredient3 }</h3>
+            <h3>${ data.meals[0].strIngredient4 }</h3>
+            <h3>${ data.meals[0].strIngredient5 }</h3>
+            <h3>${ data.meals[0].strIngredient6 }</h3>
+            <h3>${ data.meals[0].strIngredient7 }</h3> 
+            
         `;
         detailsInfo.className = 'total-info';
         foodInfo.appendChild(detailsInfo);

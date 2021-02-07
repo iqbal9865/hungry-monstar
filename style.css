@@ -1,48 +1,50 @@
-#first-input{
+#first-input {
     font-size: 20px;
-    padding: 3px;
-    width: 300px;
 }
-form{
-    width: 500px;
-    text-align: center;
-}
-#first-input{
-    width: 350px;
+#search-btn {
+    font-size: 20px;
 }
 .card{
-    width: 280px;
-    font-size: 13px;
-    border-radius: 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    width: 300px;
     margin: 5px;
+}
+.card h1{
+    font: 22px;
+    text-align: center;
+    padding: 10px 8px;
 }
 .card img{
     border-radius: 10px;
 }
-.card h1{
-    text-align: center;
-    padding: 10px;
-    font-size: 20px;
-}
 #food-info{
-    text-align: center;
-    background-color: lightcoral;
     border-radius: 20px;
-    padding: 10px;
+    text-align: center;
     display: none;
-}
-.total-info{
-    width: 50%;
-    margin: 0 auto;
+    padding: 20px 0px;
+    background-color: rgb(226, 197, 197);
+
 }
 .total-info img{
     width: 60%;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 .total-info h1{
-    font-size: 20px;
+    font-size: 30px;
+    padding: 5px 0;
 }
 .total-info h3{
-    font-size: 18px;
+    padding: 3px 0px;
+    font-size: 25px;
     text-align: left;
+}
+.total-info h3{
+    text-align: left;
+    font-size: 25px;
+    padding: 3px 0;
+}
+.total-info{
+    width: 60%;
+    margin: 0 auto;
 }
