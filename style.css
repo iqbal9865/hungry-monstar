@@ -50,3 +50,12 @@
     font-size: 20px;
     padding: 3px 0;
 }
+#items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 05px;
+}
+form{
+    padding:50px 0;
+    margin: 0 auto;
+}
