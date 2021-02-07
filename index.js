@@ -49,13 +49,13 @@ const showResult = mealId => {
             <h2>${ data.meals[0].strCategory }</h2>
             <h2>${ data.meals[0].strArea }</h2>
             <br>
-            <h3><span> ${ data.meals[0].strIngredient1 }</span> <span>${ data.meals[0].strMeasure1 }</span></h3>
-            <h3><span> ${ data.meals[0].strIngredient2 }</span> <span>${ data.meals[0].strMeasure2 }</span></h3>
-            <h3><span> ${ data.meals[0].strIngredient3 }</span> <span>${ data.meals[0].strMeasure3 }</span></h3>
-            <h3><span> ${ data.meals[0].strIngredient4 }</span> <span>${ data.meals[0].strMeasure4 }</span></h3>
-            <h3><span> ${ data.meals[0].strIngredient5 }</span> <span>${ data.meals[0].strMeasure5}</span></h3>
-            <h3><span> ${ data.meals[0].strIngredient6 }</span> <span>${ data.meals[0].strMeasure6 }</span></h3>
-            <h3><span> ${ data.meals[0].strIngredient7 }</span> <span>${ data.meals[0].strMeasure7 }</span></h3>     
+            <h4><span> ${ data.meals[0].strIngredient1 }</span> <span>${ data.meals[0].strMeasure1 }</span></h4>
+            <h4><span> ${ data.meals[0].strIngredient2 }</span> <span>${ data.meals[0].strMeasure2 }</span></h4>
+            <h4><span> ${ data.meals[0].strIngredient3 }</span> <span>${ data.meals[0].strMeasure3 }</span></h4>
+            <h4><span> ${ data.meals[0].strIngredient4 }</span> <span>${ data.meals[0].strMeasure4 }</span></h4>
+            <h4><span> ${ data.meals[0].strIngredient5 }</span> <span>${ data.meals[0].strMeasure5 }</span></h4>
+            <h4><span> ${ data.meals[0].strIngredient6 }</span> <span>${ data.meals[0].strMeasure6 }</span></h4>
+            <h4><span> ${ data.meals[0].strIngredient7 }</span> <span>${ data.meals[0].strMeasure7 }</span></h4>     
         `;
         detailsInfo.innerHTML = integrate;
         detailsInfo.className = 'total-info';
