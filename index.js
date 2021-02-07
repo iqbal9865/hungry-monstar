@@ -18,8 +18,8 @@ searchBtn.addEventListener('click',function() {
                 <img src="${ searchResult.strMealThumb }" onclick="showResult(${ searchResult.idMeal })">
                 <h2 onclick="showResult(${ searchResult.idMeal })">${ searchResult.strMeal }</h2>
             `;
-            searchFood.innerHTML = food;
             searchFood.className = "card";
+            searchFood.innerHTML = food;
             items.appendChild(searchFood);
         });
     })
