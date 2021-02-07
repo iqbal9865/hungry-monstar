@@ -1,7 +1,8 @@
 const searchBtn = document.getElementById('search-btn');
 searchBtn.addEventListener('click',function() {
     const inputFood = document.getElementById('first-input').value;
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputFood}`)
+    const api = `https://www.themealdb.com/api/json/v1/1/search.php?s=${inputFood}`;
+    fetch(api)
     //fetch the food name from input
     .then(response => response.json())
     .then(data => { 
@@ -15,7 +16,7 @@ searchBtn.addEventListener('click',function() {
             //created a child div inside items id 
             const food = `
                 <img src="${ searchResult.strMealThumb }" onclick="showResult(${ searchResult.idMeal })">
-                <h1 onclick="showResult(${ searchResult.idMeal })">${ searchResult.strMeal }</h1>
+                <h2 onclick="showResult(${ searchResult.idMeal })">${ searchResult.strMeal }</h2>
             `;
             searchFood.innerHTML = food;
             searchFood.className = "card";
@@ -25,7 +26,7 @@ searchBtn.addEventListener('click',function() {
     .catch(error => {
         //catch error for no result from search
         document.getElementById('items').innerHTML = "";
-        document.getElementById('food-info').innerHTML = ' ';
+        document.getElementById('food-info').innerHTML = "";
         const items = document.getElementById('items');
         const noResult = document.createElement('h2');
         noResult.innerHTML = "No Items Found...";
@@ -34,11 +35,12 @@ searchBtn.addEventListener('click',function() {
 })
 
 const showResult = mealId => {
-    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
+    const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`;
+    fetch(url)
     .then(response => response.json())
     .then(data => {
         const foodInfo = document.getElementById('food-info');
-        document.getElementById('food-info').innerHTML = ' ';
+        document.getElementById('food-info').innerHTML = "";
         document.getElementById('food-info').style.display = 'block';
         let detailsInfo = document.createElement('div');
 

@@ -14,8 +14,8 @@
     width: 300px;
     margin: 5px auto;
 }
-.card h1{
-    font: 10px;
+.card h2{
+    font-size: 25px;
     text-align: center;
     padding: 15px 5px;
 }
