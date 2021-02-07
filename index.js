@@ -9,15 +9,15 @@ const searchBtn = document.getElementById('search-btn').addEventListener('click'
         data.meals.forEach(searchResult => {
             const searchFood = document.createElement('div');
             searchFood.innerHTML = `
-                <img src="${searchResult.strMealThumb}" onclick="showResult(${searchResult.idMeal})">
-                <h1 onclick="showResult(${searchResult.idMeal})"> ${searchResult.strMeal}</h1>
+                <img src="${searchResult.strMealThumb}" onclick="showResult(${ searchResult.idMeal })">
+                <h1 onclick="showResult(${ searchResult.idMeal })">${ searchResult.strMeal }</h1>
             `;
             searchFood.className = "card";
             items.appendChild(searchFood);
         });
     })
     .catch(error => {
-        console.log(error);
+        // console.log(error);
         document.getElementById('items').innerHTML = "";
         document.getElementById('food-info').innerHTML = ' ';
         const items = document.getElementById('items');
@@ -27,7 +27,7 @@ const searchBtn = document.getElementById('search-btn').addEventListener('click'
     })
 })
 
-let showResult = mealId =>{
+let showResult = mealId => {
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
     .then(res => res.json())
     .then(data => {
@@ -37,8 +37,10 @@ let showResult = mealId =>{
         let detailsInfo = document.createElement('div');
         detailsInfo.innerHTML = `
             <img src="${data.meals[0].strMealThumb}">
-            <h1>${data.meals[0].strMeal}</h1> <br>
-            <h2>${data.meals[0].strArea}</h2> <br>
+            <h1>${data.meals[0].strMeal}</h1> 
+            <br>
+            <h2>${data.meals[0].strArea}</h2>
+            <br>
 
             <h3>${data.meals[0].strIngredient1}</h3>
             <h3>${data.meals[0].strIngredient2}</h3>
