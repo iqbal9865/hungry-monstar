@@ -1,0 +1,48 @@
+#first-input{
+    font-size: 20px;
+    padding: 5px;
+    width: 300px;
+}
+form{
+    width: 500px;
+    text-align: center;
+}
+#first-input{
+    width: 350px;
+}
+.card{
+    width: 280px;
+    font-size: 13px;
+    border-radius: 10px;
+    margin: 5px;
+}
+.card img{
+    border-radius: 10px;
+}
+.card h1{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+}
+#food-info{
+    text-align: center;
+    background-color: lightcoral;
+    border-radius: 20px;
+    padding: 10px;
+    display: none;
+}
+.total-info{
+    width: 50%;
+    margin: 0 auto;
+}
+.total-info img{
+    width: 40%;
+    border-radius: 10px;
+}
+.total-info h1{
+    font-size: 20px;
+}
+.total-info h3{
+    font-size: 18px;
+    text-align: left;
+}
