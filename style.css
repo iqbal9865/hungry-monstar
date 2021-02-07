@@ -26,10 +26,6 @@
     background-color: rgb(226, 197, 197);
 
 }
-.total-info img{
-    width: 60%;
-    border-radius: 20px;
-}
 .total-info h1{
     font-size: 30px;
     padding: 5px 0;
@@ -37,12 +33,16 @@
 .total-info h2{
     font-size: 22px;
 }
-.total-info h4{
-    text-align: left;
-    font-size: 20px;
-    padding: 3px 0;
+.total-info img{
+    width: 60%;
+    border-radius: 20px;
 }
 .total-info{
     width: 60%;
     margin: 0 auto;
+}
+.total-info h4{
+    text-align: left;
+    font-size: 20px;
+    padding: 3px 0;
 }
