@@ -48,8 +48,8 @@ const showResult = mealId => {
         const integrate = `
             <img src="${ data.meals[0].strMealThumb }">
             <h1>${ data.meals[0].strMeal }</h1> 
-            <h2>${ data.meals[0].strCategory }</h2>
-            <h2>${ data.meals[0].strArea }</h2>
+            <h2>Categories: ${ data.meals[0].strCategory }</h2>
+            <h2>Area: ${ data.meals[0].strArea }</h2>
             <br>
             <h4><strong><u>Ingredients</u></strong></h4>
             <h4><span> ${ data.meals[0].strIngredient1 }</span> <span>${ data.meals[0].strMeasure1 }</span></h4>
