@@ -49,6 +49,7 @@ const showResult = mealId => {
             <h2>${ data.meals[0].strCategory }</h2>
             <h2>${ data.meals[0].strArea }</h2>
             <br>
+            <h4><strong><u>Ingredients</u></strong></h4>
             <h4><span> ${ data.meals[0].strIngredient1 }</span> <span>${ data.meals[0].strMeasure1 }</span></h4>
             <h4><span> ${ data.meals[0].strIngredient2 }</span> <span>${ data.meals[0].strMeasure2 }</span></h4>
             <h4><span> ${ data.meals[0].strIngredient3 }</span> <span>${ data.meals[0].strMeasure3 }</span></h4>
