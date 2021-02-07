@@ -8,12 +8,12 @@
     border-radius: 15px;
     font-size: 15px;
     width: 300px;
-    margin: 5px;
+    margin: 5px auto;
 }
 .card h1{
-    font: 22px;
+    font: 10px;
     text-align: center;
-    padding: 10px 8px;
+    padding: 15px 5px;
 }
 .card img{
     border-radius: 10px;
@@ -22,7 +22,7 @@
     border-radius: 20px;
     text-align: center;
     display: none;
-    padding: 20px 0px;
+    padding: 20px 10px;
     background-color: rgb(226, 197, 197);
 
 }
@@ -34,14 +34,12 @@
     font-size: 30px;
     padding: 5px 0;
 }
-.total-info h3{
-    padding: 3px 0px;
-    font-size: 25px;
-    text-align: left;
+.total-info h2{
+    font-size: 22px;
 }
 .total-info h3{
     text-align: left;
-    font-size: 25px;
+    font-size: 15px;
     padding: 3px 0;
 }
 .total-info{

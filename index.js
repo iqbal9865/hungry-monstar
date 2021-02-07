@@ -38,7 +38,9 @@ let showResult = mealId => {
         detailsInfo.innerHTML = `
             <img src="${ data.meals[0].strMealThumb }">
             <h1>${ data.meals[0].strMeal }</h1> 
-            <br>
+            
+            <h2>${ data.meals[0].strCategory }</h2>
+            
             <h2>${ data.meals[0].strArea }</h2>
             <br>
 
