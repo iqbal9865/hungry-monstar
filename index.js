@@ -1,4 +1,5 @@
-const searchBtn = document.getElementById('search-btn').addEventListener('click',function(){
+const searchBtn = document.getElementById('search-btn');
+searchBtn.addEventListener('click',function() {
     const inputFood = document.getElementById('first-input').value;
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputFood}`)
     .then(res => res.json())
@@ -9,7 +10,7 @@ const searchBtn = document.getElementById('search-btn').addEventListener('click'
         data.meals.forEach(searchResult => {
             const searchFood = document.createElement('div');
             searchFood.innerHTML = `
-                <img src="${searchResult.strMealThumb}" onclick="showResult(${ searchResult.idMeal })">
+                <img src="${ searchResult.strMealThumb }" onclick="showResult(${ searchResult.idMeal })">
                 <h1 onclick="showResult(${ searchResult.idMeal })">${ searchResult.strMeal }</h1>
             `;
             searchFood.className = "card";
@@ -17,7 +18,6 @@ const searchBtn = document.getElementById('search-btn').addEventListener('click'
         });
     })
     .catch(error => {
-        // console.log(error);
         document.getElementById('items').innerHTML = "";
         document.getElementById('food-info').innerHTML = ' ';
         const items = document.getElementById('items');
@@ -42,15 +42,16 @@ let showResult = mealId => {
             <h2>${ data.meals[0].strArea }</h2>
             <br>
 
-            <h3>${ data.meals[0].strIngredient1 }</h3>
-            <h3>${ data.meals[0].strIngredient2 }</h3>
-            <h3>${ data.meals[0].strIngredient3 }</h3>
-            <h3>${ data.meals[0].strIngredient4 }</h3>
-            <h3>${ data.meals[0].strIngredient5 }</h3>
-            <h3>${ data.meals[0].strIngredient6 }</h3>
-            <h3>${ data.meals[0].strIngredient7 }</h3>
+            <h3>${ data.meals[0].strMeasure1 }</h3>
+            <h3>${ data.meals[0].strMeasure2 }</h3>
+            <h3>${ data.meals[0].strMeasure3 }</h3>
+            <h3>${ data.meals[0].strMeasure4 }</h3>
+            <h3>${ data.meals[0].strMeasure5 }</h3>
+            <h3>${ data.meals[0].strMeasure6 }</h3>
+            <h3>${ data.meals[0].strMeasure7 }</h3>     
         `;
         detailsInfo.className = 'total-info';
         foodInfo.appendChild(detailsInfo);
     })
 }
+//need to change strMeasuring
