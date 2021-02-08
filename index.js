@@ -1,5 +1,4 @@
-const searchBtn = document.getElementById('search-btn');
-searchBtn.addEventListener('click',function() {
+const StartSearch = () => { 
     const inputFood = document.getElementById('first-input').value;
     const api = `https://www.themealdb.com/api/json/v1/1/search.php?s=${inputFood}`;
     fetch(api)
@@ -7,9 +6,9 @@ searchBtn.addEventListener('click',function() {
     .then(response => response.json())
     .then(data => { 
         document.getElementById('items').innerHTML = "";
-        //make it null because for showing next result
+        //make it null because of showing next result
         document.getElementById('food-info').innerHTML = "";
-         //make it null because for showing next result
+         //make it null because of showing next result
         const items = document.getElementById('items');
         data.meals.forEach(searchResult => {
             let searchFood = document.createElement('div');
@@ -32,13 +31,15 @@ searchBtn.addEventListener('click',function() {
         noResult.innerHTML = "No Items Found...";
         items.appendChild(noResult);
     })
-})
-
-const showResult = mealId => {
+}
+//using async await instead of fetch
+const showResult = async (mealId) => {
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`;
-    fetch(url)
-    .then(response => response.json())
-    .then(data => {
+    const response = await fetch(url);
+    const data = await response.json();
+    showIngredients(data);
+}   
+const showIngredients = data => {
         const foodInfo = document.getElementById('food-info');
         document.getElementById('food-info').innerHTML = "";
         document.getElementById('food-info').style.display = 'block';
@@ -63,5 +64,4 @@ const showResult = mealId => {
         detailsInfo.innerHTML = integrate;
         detailsInfo.className = 'total-info';
         foodInfo.appendChild(detailsInfo);
-    })
-}
+    }
